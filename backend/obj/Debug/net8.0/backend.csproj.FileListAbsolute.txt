@@ -135,3 +135,4 @@ C:\Users\Guilherme\Desktop\Workspace\Desafio_HighCapital\backend\obj\Debug\net8.
 C:\Users\Guilherme\Desktop\Workspace\Desafio_HighCapital\backend\obj\Debug\net8.0\backend.genruntimeconfig.cache
 C:\Users\Guilherme\Desktop\Workspace\Desafio_HighCapital\backend\obj\Debug\net8.0\ref\backend.dll
 C:\Users\Guilherme\Desktop\Workspace\Desafio_HighCapital\backend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Guilherme\Desktop\Workspace\Desafio_HighCapital\backend\obj\Debug\net8.0\backend.sourcelink.json

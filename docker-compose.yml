@@ -16,12 +16,12 @@ services:
     build: ./backend
     container_name: backend
     restart: unless-stopped
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
     depends_on:
       - postgres
     ports:
       - "8080:8080"
-    volumes:
-      - ./backend:/app
 
   frontend:
     build:
@@ -35,7 +35,7 @@ services:
       # Variável de ambiente para o frontend, definindo a URL da API do backend.
       # Usamos o nome do serviço 'backend' na rede Docker, e a porta 8080 que está exposta.
       # Se você precisar de HTTPS, o backend também precisaria ser configurado para isso.
-      - VITE_API_BASE_URL=http://backend:8080
+      - VITE_API_BASE_URL=http://localhost:8080
     ports:
       - "5173:80"
     volumes:

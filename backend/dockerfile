@@ -1,34 +1,29 @@
-# Estágio 1: Build
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+# Acesse https://aka.ms/customizecontainer para saber como personalizar seu contêiner de depuração e como o Visual Studio usa este Dockerfile para criar suas imagens para uma depuração mais rápida.
 
-# Define o diretório de trabalho principal.
+# Esta fase é usada durante a execução no VS no modo rápido (Padrão para a configuração de Depuração)
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-
-# Copia o arquivo .csproj e restaura as dependências para otimizar o cache.
-# O caminho de origem é apenas "backend.csproj" porque o contexto de build já é o diretório 'backend'.
-COPY backend.csproj .
-RUN dotnet restore
-
-# Copia todo o restante do código fonte do projeto.
-COPY . .
-
-# Publica o aplicativo em modo de Release.
-# O output é um diretório 'publish' dentro do container.
-RUN dotnet publish -c Release -o publish --no-restore
-
-# Estágio 2: Runtime (imagem final)
-# Usa uma imagem menor, apenas com o runtime .NET.
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
-
-# Define o diretório de trabalho da imagem final.
-WORKDIR /app
-
-# Copia os arquivos publicados do estágio de build para o diretório de trabalho.
-COPY --from=build /app/publish .
-
-# Define a porta que o container irá expor.
 EXPOSE 8080
+EXPOSE 8081
 
-# Comando de execução da aplicação.
-# O 'backend.dll' agora está no diretório principal.
+
+# Esta fase é usada para compilar o projeto de serviço
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG BUILD_CONFIGURATION=Release
+WORKDIR /src
+COPY ["backend.csproj", "."]
+RUN dotnet restore "./backend.csproj"
+COPY . .
+WORKDIR "/src/."
+RUN dotnet build "./backend.csproj" -c $BUILD_CONFIGURATION -o /app/build
+
+# Esta fase é usada para publicar o projeto de serviço a ser copiado para a fase final
+FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "./backend.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+
+# Esta fase é usada na produção ou quando executada no VS no modo normal (padrão quando não está usando a configuração de Depuração)
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "backend.dll"]

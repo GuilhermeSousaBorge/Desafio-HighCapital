@@ -9,8 +9,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("http://localhost:5173") // Vite padrão
-              .AllowAnyOrigin()
+        policy.WithOrigins("http://localhost:5173") // Vite padrão 
             .AllowAnyMethod()
             .AllowAnyHeader();
     });
@@ -28,20 +27,29 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
+app.UseCors("AllowFrontend");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "ChatGPT API V1");
+        c.RoutePrefix = "swagger";
+    });
 }
 
-app.UseHttpsRedirection();
+if (!app.Environment.IsProduction())
+{
+    app.UseHttpsRedirection(); // só fora do container
+}
 
-app.UseCors("AllowFrontend");
+
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.Urls.Add("http://+:8080");
 
 app.Run();
