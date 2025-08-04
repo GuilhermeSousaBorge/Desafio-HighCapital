@@ -1,0 +1,45 @@
+services:
+  postgres:
+    image: postgres
+    container_name: chatbot_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: ChatBotDb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: backend
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      # Variável de ambiente para o frontend, definindo a URL da API do backend.
+      # Usamos o nome do serviço 'backend' na rede Docker, e a porta 8080 que está exposta.
+      # Se você precisar de HTTPS, o backend também precisaria ser configurado para isso.
+      - VITE_API_BASE_URL=http://backend:8080
+    ports:
+      - "5173:80"
+    volumes:
+      - ./frontend:/app
+
+volumes:
+  pgdata:
