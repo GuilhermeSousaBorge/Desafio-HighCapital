@@ -44,7 +44,7 @@
   {
     "ContainingType": "backend.Controllers.MessagesController",
     "Method": "SendMessage",
-    "RelativePath": "Bot/{id}/chat",
+    "RelativePath": "api/Messages/Bot/{id}/chat",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

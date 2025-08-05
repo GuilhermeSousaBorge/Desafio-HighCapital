@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|c:\\users\\guilherme\\desktop\\workspace\\desafio_highcapital\\backend\\controllers\\messagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|solutionrelative:controllers\\messagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|c:\\users\\guilherme\\desktop\\workspace\\desafio_highcapital\\backend\\services\\openaiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|solutionrelative:services\\openaiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|c:\\users\\guilherme\\desktop\\workspace\\desafio_highcapital\\backend\\controllers\\botscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|solutionrelative:controllers\\botscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|c:\\users\\guilherme\\desktop\\workspace\\desafio_highcapital\\backend\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|solutionrelative:models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|c:\\users\\guilherme\\desktop\\workspace\\desafio_highcapital\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|c:\\users\\guilherme\\desktop\\workspace\\desafio_highcapital\\backend\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|c:\\users\\guilherme\\desktop\\workspace\\desafio_highcapital\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|c:\\users\\guilherme\\desktop\\workspace\\desafio_highcapital\\backend\\interfaces\\iopenaiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|solutionrelative:interfaces\\iopenaiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|c:\\users\\guilherme\\desktop\\workspace\\desafio_highcapital\\backend\\services\\botservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA19181-57E3-4C64-967D-7B982728F3E6}|backend.csproj|solutionrelative:services\\botservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,28 +58,105 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Dockerfile",
-              "RelativeDocumentMoniker": "Dockerfile",
-              "ToolTip": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Dockerfile",
-              "RelativeToolTip": "Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-08-04T13:55:39.606Z",
+              "DocumentIndex": 3,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Models\\Message.cs",
+              "RelativeDocumentMoniker": "Models\\Message.cs",
+              "ToolTip": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Models\\Message.cs",
+              "RelativeToolTip": "Models\\Message.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T00:06:43.842Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-05T00:00:23.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BotsController.cs",
+              "DocumentMoniker": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Controllers\\BotsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BotsController.cs",
+              "ToolTip": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Controllers\\BotsController.cs",
+              "RelativeToolTip": "Controllers\\BotsController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwC4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T23:59:17.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IOpenAiService.cs",
+              "DocumentMoniker": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Interfaces\\IOpenAiService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IOpenAiService.cs",
+              "ToolTip": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Interfaces\\IOpenAiService.cs",
+              "RelativeToolTip": "Interfaces\\IOpenAiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T23:56:00.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAkwDUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T13:54:39.106Z",
+              "WhenOpened": "2025-08-04T19:40:46.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MessagesController.cs",
+              "DocumentMoniker": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Controllers\\MessagesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MessagesController.cs",
+              "ToolTip": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Controllers\\MessagesController.cs",
+              "RelativeToolTip": "Controllers\\MessagesController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwDUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T19:29:58.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BotService.cs",
+              "DocumentMoniker": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Services\\BotService.cs",
+              "RelativeDocumentMoniker": "Services\\BotService.cs",
+              "ToolTip": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Services\\BotService.cs",
+              "RelativeToolTip": "Services\\BotService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T19:29:52.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OpenAiService.cs",
+              "DocumentMoniker": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Services\\OpenAiService.cs",
+              "RelativeDocumentMoniker": "Services\\OpenAiService.cs",
+              "ToolTip": "C:\\Users\\Guilherme\\Desktop\\Workspace\\Desafio_HighCapital\\backend\\Services\\OpenAiService.cs",
+              "RelativeToolTip": "Services\\OpenAiService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAIwEwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T19:26:38.81Z",
               "EditorCaption": ""
             }
           ]

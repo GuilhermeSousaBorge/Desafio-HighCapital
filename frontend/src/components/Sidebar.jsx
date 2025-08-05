@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import api from "../api/axios";
 
-export default function Sidebar({ bots, onSelectBot, selectedBotId }) {
+export default function Sidebar({ bots, onCreateBot, onSelectBot, selectedBotId }) {
   const [name, setName] = useState("");
   const [context, setContext] = useState("");
   const [loading, setLoading] = useState(false);
@@ -13,6 +13,7 @@ export default function Sidebar({ bots, onSelectBot, selectedBotId }) {
       console.log("Bots recebidos:", res.data);
       // Se for usar estado local depois:
       // setBots(res.data);
+      onCreateBot(res.data);
     } catch (err) {
       console.error("Erro ao buscar bots:", err);
     } finally {

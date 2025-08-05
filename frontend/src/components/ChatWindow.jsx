@@ -35,21 +35,23 @@ export default function ChatWindow() {
     if (!input.trim() || !selectedBotId) return;
   
     const newMessage = {
-        message: input.trim()
+        content: input.trim()
     };
   
     try {
       const res = await api.post(
-        `/Bots/${selectedBotId}/chat`,
+        `Messages/Bot/${selectedBotId}/chat`,
         newMessage
       );
-  
+      console.log(res);
       // Supondo que o backend responda com TODAS as mensagens atualizadas ou só a nova mensagem + resposta
       const botReply = res.data; // ajusta conforme resposta da API
   
       setMessages(prev => ({
         ...prev,
-        [selectedBotId]: [...(prev[selectedBotId] || []), newMessage, botReply]
+        [selectedBotId]: [...(prev[selectedBotId] || []), 
+        botReply.userMessage, 
+        botReply.botMessage]
       }));
   
       setInput('');
@@ -57,17 +59,17 @@ export default function ChatWindow() {
       console.error('Erro ao enviar mensagem:', err);
     }
   };
-
-  const currentMessages = messages[selectedBotId] || [];
+  console.log(messages)
+  // const currentMessages = messages[selectedBotId] || [];
 
   return (
     <div className="flex h-screen">
-      <Sidebar bots={bots} selectedBotId={selectedBotId} onSelectBot={(bot) => setSelectedBotId(bot.id)} />
+      <Sidebar bots={bots} onCreateBot={setBots} selectedBotId={selectedBotId} onSelectBot={(bot) => setSelectedBotId(bot.id)} />
 
       <div className="flex-1 bg-white dark:bg-zinc-950 p-6 flex flex-col">
         {selectedBotId ? (
           <>
-            <Message currentMessages={currentMessages} />
+            <Message currentMessages={messages[selectedBotId]} />
 
             <div className="mt-4 flex gap-2">
               <input

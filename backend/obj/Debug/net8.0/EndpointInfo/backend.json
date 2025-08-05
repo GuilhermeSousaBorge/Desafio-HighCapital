@@ -69,7 +69,7 @@
         }
       }
     },
-    "/Bot/{id}/chat": {
+    "/api/Messages/Bot/{id}/chat": {
       "post": {
         "tags": [
           "Messages"
@@ -131,7 +131,7 @@
       "ChatRequest": {
         "type": "object",
         "properties": {
-          "message": {
+          "content": {
             "type": "string",
             "nullable": true
           }
